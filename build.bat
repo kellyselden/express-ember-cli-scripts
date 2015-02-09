@@ -1,6 +1,7 @@
 pushd %~dp0
 call clean-tmp
 call install
+call version
 pushd ..
 pushd client
 <nul set /p=%2>host
