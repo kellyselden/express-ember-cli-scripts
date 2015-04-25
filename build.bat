@@ -6,7 +6,6 @@ call install
 call version
 pushd ..
 pushd client
-<nul set /p=%2>host
 call ember build --environment=%1 >stdout.txt
 type stdout.txt
 findstr /C:"Cleanup error" stdout.txt
@@ -22,7 +21,6 @@ if %count% lss 10 (
 )
 :success
 del stdout.txt
-del /q host
 popd
 if exist server\public (rd server\public /s /q)
 echo d | xcopy client\dist server\public /S
