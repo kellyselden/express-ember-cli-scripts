@@ -4,6 +4,6 @@ copy scripts\github-express server\github
 copy scripts\facebook-express server\facebook
 copy scripts\mongo-heroku server\connectionstring
 pushd server
-nodemon index
+call nodemon index
 popd
 popd
