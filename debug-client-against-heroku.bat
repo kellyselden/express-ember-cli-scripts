@@ -5,7 +5,7 @@ copy scripts\host-ember client\host
 copy scripts\github-ember client\github
 copy scripts\facebook-ember client\facebook
 pushd client
-call ember s --environment=heroku --proxy=%host_heroku%
+call ember s --proxy=%host_heroku%
 popd
 popd
 popd
