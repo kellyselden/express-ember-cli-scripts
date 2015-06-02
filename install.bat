@@ -13,6 +13,8 @@ findstr "ECMDERR" stderr.txt
 if %errorlevel%==0 goto :error
 findstr "ECONNREFUSED" stderr.txt
 if %errorlevel%==0 goto :error
+findstr "EPERM" stderr.txt
+if %errorlevel%==0 goto :error
 goto :success
 :error
 if %count% geq 10 exit /b 1
