@@ -1,4 +1,6 @@
-pushd %~dp0..\client
+pushd %~dp0..
+
+pushd client
 SETLOCAL
 set count=0
 :restart
@@ -24,4 +26,11 @@ goto :restart
 :success
 del stderr.txt
 ENDLOCAL
+popd
+
+pushd server
+call npm prune
+call npm install
+popd
+
 popd
