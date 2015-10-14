@@ -6,6 +6,7 @@ copy scripts\github-ember client\github
 copy scripts\facebook-ember client\facebook
 pushd client
 call ember s --proxy=%host_express%
+rem call ember s
 popd
 popd
 popd
